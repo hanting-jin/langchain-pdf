@@ -4,5 +4,6 @@ export default {
 	theme: {
 		extend: {}
 	},
+	darkMode: false, // 禁用dark模式
 	plugins: [require('preline/plugin')]
 };

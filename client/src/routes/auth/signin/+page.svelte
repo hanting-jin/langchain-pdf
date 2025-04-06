@@ -22,12 +22,12 @@
 
 <main class="w-full max-w-md mx-auto p-6">
 	<div
-		class="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700"
+		class="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm"
 	>
 		<div class="p-4 sm:p-7">
 			<div class="text-center">
 				<h1 class="block text-2xl font-bold text-gray-800">Sign In</h1>
-				<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+				<p class="mt-2 text-sm text-gray-600">
 					Don't have have an account?
 					<a class="text-blue-600 decoration-2 hover:underline font-medium" href="/auth/signup">
 						Sign Up Here

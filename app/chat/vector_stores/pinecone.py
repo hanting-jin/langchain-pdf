@@ -1,4 +1,5 @@
 import os
+from langchain_community.chat_message_histories import kafka
 from pinecone import Pinecone
 from langchain_community.vectorstores import Pinecone as LangchainPinecone
 from app.chat.embeddings.openai import embeddings
@@ -22,6 +23,9 @@ vector_store = LangchainPinecone.from_existing_index(
     embedding=embeddings,
 )
 
-def build_retriever(chat_args):
-    search_kwargs = {"filter":{"pdf_id":chat_args.pdf_id }}
+def build_retriever(chat_args,k):
+    search_kwargs = {
+        "filter":{"pdf_id":chat_args.pdf_id }, 
+        "k": k,
+    }
     return vector_store.as_retriever(search_kwargs=search_kwargs)
